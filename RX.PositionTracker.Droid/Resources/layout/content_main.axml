@@ -7,9 +7,82 @@
     android:background="@color/colorPrimaryDark"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main">
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/layoutTabs"
+        android:orientation="horizontal"
+        android:weightSum="1.0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonCurrentValuesTab"
+            android:gravity="center"
+            android:textSize="@dimen/h3_text_size"
+            android:typeface="sans"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:paddingTop="14dp"
+            android:paddingBottom="12dp"
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/tabs_height"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:text="CURRENT VALUES" />
+        <Button
+            android:id="@+id/buttonDeviceInfoTab"
+            android:gravity="center"
+            android:textSize="@dimen/h3_text_size"
+            android:typeface="sans"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:paddingTop="14dp"
+            android:paddingBottom="12dp"
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/tabs_height"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:text="DEVICE INFO" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layoutTabSelectors"
+        android:layout_below="@id/layoutTabs"
+        android:weightSum="1.0"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Hello World!" />
+        android:layout_marginTop="-3dp">
+        <LinearLayout
+            android:id="@+id/selectorCurrentValuesTab"
+            android:orientation="horizontal"
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="3dp"
+            android:background="@color/colorAccent" />
+        <LinearLayout
+            android:id="@+id/selectorDeviceInfoTab"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_weight=".5"
+            android:layout_width="0dip"
+            android:layout_height="3dp"
+            android:background="@color/colorAccent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/tabs_height"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progressBarLoading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateOnly="true"
+            style="?android:attr/progressBarStyleHorizontal" />
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
 </RelativeLayout>

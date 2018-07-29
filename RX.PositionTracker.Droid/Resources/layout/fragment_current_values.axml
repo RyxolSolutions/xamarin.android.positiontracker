@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_section">
+                <TextView
+                    android:text="SPEED (km/hr)"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textCurrentSpeedTitle"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/padding_container" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textCurrentSpeed"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/h6_text_size"
+                    android:layout_below="@id/textCurrentSpeedTitle"
+                    android:layout_marginTop="@dimen/padding_container_small" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/separator_height"
+                android:background="@color/colorPrimary" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_section">
+                <TextView
+                    android:text="DISTANCE (km)"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textCurrentDistanceTitle"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/padding_container" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textCurrentDistance"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/h6_text_size"
+                    android:layout_below="@id/textCurrentDistanceTitle"
+                    android:layout_marginTop="@dimen/padding_container_small" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_container_big"
+                android:background="@color/colorPrimary"
+                android:id="@+id/relativeLayout2">
+                <TextView
+                    android:text="COORDINATES"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textCoordinatesTitle"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/h2_text_size"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_container_small"
+                android:layout_marginBottom="@dimen/padding_container_small"
+                android:layout_marginLeft="@dimen/padding_container"
+                android:layout_marginRight="@dimen/padding_container">
+                <TextView
+                    android:text="LATTITUDE:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textLatitudeTitle"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textLatitude"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp" />
+                <TextView
+                    android:text="LONGITUDE:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_container_big"
+                    android:id="@+id/textLongitudeTitle"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textLongitude"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/padding_container_big" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_container_big"
+                android:background="@color/colorPrimary">
+                <TextView
+                    android:text="ACCELEROMETER"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textAccelerometerTitle"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/h2_text_size"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_container_small"
+                android:layout_marginBottom="@dimen/padding_container_small"
+                android:layout_marginLeft="@dimen/padding_container"
+                android:layout_marginRight="@dimen/padding_container">
+                <TextView
+                    android:text="X:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textAccelerometerX"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="4dp" />
+                <TextView
+                    android:text="Y:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_container_big"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textAccelerometerY"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/padding_container_big" />
+                <TextView
+                    android:text="Z:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textAccelerometerZ"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="56dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/colorPrimary">
+                <TextView
+                    android:text="ALTITUDE:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textAltitudeTitle"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/padding_container"
+                    android:textSize="@dimen/h2_text_size"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textAltitude"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/padding_container"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/h3_text_size" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+                <ProgressBar
+                    android:id="@+id/progressBarCalibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateDrawable="@drawable/circular_progress_bar"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
+                <Button
+                    android:id="@+id/buttonCalibrate"
+                    android:gravity="center"
+                    android:background="@color/content_orange"
+                    android:typeface="sans"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="CALIBRATE"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="90dp">
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateDrawable="@drawable/circular_progress_bar"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
+                <Button
+                    android:id="@+id/buttonStart"
+                    android:gravity="center"
+                    android:background="@color/colorAccent"
+                    android:typeface="sans"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:textAllCaps="true"
+                    android:text="START TRACKING"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/padding_container" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -57,8 +57,22 @@
   <ItemGroup>
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\SplashActivity.cs" />
+    <Compile Include="AppWrapper.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Enums\PartialType.cs" />
+    <Compile Include="Fragments\Base\BaseFragment.cs" />
+    <Compile Include="Fragments\CurrentValuesFragment.cs" />
+    <Compile Include="Fragments\DeviceInfoFragment.cs" />
+    <Compile Include="Helpers\DeviceInfoHelper.cs" />
+    <Compile Include="Managers\AccelerometerManager.cs" />
+    <Compile Include="Managers\LocationManager.cs" />
+    <Compile Include="Managers\RotationManager.cs" />
+    <Compile Include="Managers\SessionManager.cs" />
+    <Compile Include="Managers\VMManager.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MotionService.cs" />
+    <Compile Include="ViewModels\AccelerometerDataViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -97,10 +111,13 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_speed.png" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Location">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Maps">
+      <Version>60.1142.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
@@ -109,46 +126,38 @@
     <AndroidResource Include="Resources\drawable\splash_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\settings_white.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\signout_white.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_speed.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\settings_white.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\signout_white.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_speed.png" />
+    <AndroidResource Include="Resources\layout\fragment_current_values.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\settings_white.png" />
+    <AndroidResource Include="Resources\drawable\circular_progress_bar.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\signout_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_notification.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_speed.png" />
+    <AndroidResource Include="Resources\drawable\ic_stat_onesignal_default.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\settings_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\signout_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_speed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\settings_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\signout_white.png" />
+    <AndroidResource Include="Resources\layout\fragment_device_info.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

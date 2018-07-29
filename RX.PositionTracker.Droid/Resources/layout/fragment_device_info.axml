@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/progressBarLoading"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="24dip"
+                android:maxHeight="24dip"
+                android:visibility="gone"
+                android:indeterminateOnly="true"
+                style="?android:attr/progressBarStyleHorizontal" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_section">
+                <TextView
+                    android:text="IMEI"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textIMEITitle"
+                    android:textColor="@color/content_orange"
+                    android:textSize="@dimen/h3_text_size"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/padding_container" />
+                <TextView
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textIMEI"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/h2_text_size"
+                    android:layout_below="@id/textIMEITitle"
+                    android:layout_marginTop="@dimen/padding_container_small" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_container_big"
+                android:background="@color/colorPrimary"
+                android:paddingLeft="@dimen/padding_container"
+                android:paddingRight="@dimen/padding_container"
+                android:paddingTop="@dimen/padding_container">
+                <TextView
+                    android:text="SENSORS"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSensorsTitle"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/h2_text_size"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabs_height"
+                android:layout_marginTop="@dimen/padding_container_small"
+                android:layout_marginBottom="@dimen/padding_container_small"
+                android:layout_marginLeft="@dimen/padding_container"
+                android:layout_marginRight="@dimen/padding_container">
+                <TextView
+                    android:text="LINEAR ACCELERATION"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/h3_text_size"
+                    android:textColor="@color/content_orange" />
+                <TextView
+                    android:text="NO"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textGetLinearAcceleration"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/h3_text_size"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabs_height"
+                android:layout_marginTop="@dimen/padding_container_small"
+                android:layout_marginBottom="@dimen/padding_container_small"
+                android:layout_marginLeft="@dimen/padding_container"
+                android:layout_marginRight="@dimen/padding_container">
+                <TextView
+                    android:text="GRAVITY"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/h3_text_size"
+                    android:textColor="@color/content_orange" />
+                <TextView
+                    android:text="NO"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textGetGravity"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/h3_text_size"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabs_height"
+                android:layout_marginTop="@dimen/padding_container_small"
+                android:layout_marginBottom="@dimen/padding_container_small"
+                android:layout_marginLeft="@dimen/padding_container"
+                android:layout_marginRight="@dimen/padding_container">
+                <TextView
+                    android:text="ROTATION VECTOR"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/h3_text_size"
+                    android:textColor="@color/content_orange" />
+                <TextView
+                    android:text="NO"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textGetRotationVector"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/h3_text_size"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
